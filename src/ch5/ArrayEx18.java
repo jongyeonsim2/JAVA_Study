@@ -6,6 +6,9 @@ public class ArrayEx18 {
 		// TODO Auto-generated method stub
 		
 		// 4행 3열의 2차원 배열 생성.
+		// - 2차원 배열의 요소는 1차원 배열임.
+		// - 요소가 1차원 배열의 갯수가 4개. => 4행
+		// - 각 요소가 1차원 배열의 요소 3개. => 3열
 		int[][] score = {
 							{100, 100, 100}
 							, { 20, 20, 20}
@@ -22,9 +25,9 @@ public class ArrayEx18 {
 		int tot = 0;
 		
 		//2차원 배열에서 각 요소는 1차원 배열임.
-		for (int[] tmp : score) {
+		for (int[] tmp : score) { // 2차원 배열에서 각 요소를 접근(4개 => 4행). 각 요소가 1차원 배열.
 			// 1차원 배열에서 요소값을 추출
-			for(int i : tmp) {
+			for(int i : tmp) { // tmp 는 2차원 배열에서 추출한 요소(1차원 배열). 각 요소(int, 정수)를 추출.
 				tot += i;
 			}
 		}
