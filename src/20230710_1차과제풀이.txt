@@ -41,6 +41,9 @@
   조건을 포함시킨 CURD 를 구현.
   
   Entity 를 추가. Entity 는 총 2개.
+  학생 Entity 만 사용.
+  과목 Entity 를 추가.
+  반 Entity 를 추가.
   
   Entity 2개로 조건을 포함시킨 CURD 를 구현.
   
