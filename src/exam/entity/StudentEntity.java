@@ -27,7 +27,16 @@ public class StudentEntity {
 	// 현재 DB의 가용 공간 상태 : 여유가 없는 경우의 에러
 	public static int ERR_ARRAY_FULL = 2;
 	
-
+	// Controller 에서 접근하기 위한 메소드
+	public Student[] getStuArr() {
+		return stuArr;
+	}
+	
+	// Controller 에서 배열에 실제 저장된 위치 정보에 접근하기 위한 메소드
+	public int getNextArrIdx() {
+		return nextArrIdx;
+	}
+	
 	// StudentEntity 초기화, 객체 배열 생성.
 	public int initStudentEntity(int arrLength, boolean sampleDataInsert) {
 		
@@ -41,14 +50,24 @@ public class StudentEntity {
 				
 				// Student 객체 생성.
 				Student student = new Student();
+				student.stuNo = i + 1;
+				student.stuName = "Student" + student.stuNo;
+				student.korScore = 100 - (i * 10);
+				student.engScore = 100 - (i * 10);
+				student.mathScore = 100 - (i * 10);
 				
+				stuArr[i] = student;
+				
+				// DB의 관리용 데이터 갱신
+				nextArrIdx = i + 1;
+				stuNextNo = student.stuNo + 1;
 			}
 			
+			return arrLength;
+		} else {
+			return 0;
 		}
 		
-		
-		
-		return 0;
 	}
 	
 	// 한 건의 데이터가 저장되는 기능.
