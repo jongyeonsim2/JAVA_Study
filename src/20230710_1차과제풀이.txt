@@ -1,0 +1,54 @@
+
+
+
+     1단계 : 기능 및 클래스 식별( OOP 특성을 적용하기 위해서 )
+     2단계 : 데이터 class 구현 ( entity class )
+            컨트롤 class 구현 ( controller class )
+            기타 클래스 구현
+     3단계 : 버그 수정, 
+            데이터 및 코드의 신뢰성을 높이기
+     4단계 : 재사용성 높이기
+     5단계 : 유지보수성 높이기
+     
+
+- 프로그램의 구조를 어떻게 가져갈 것인가?
+  class, class  의 종류, class 를 관리할 폴더,
+  
+- 3tier 아키텍처를 적용
+  clinet - view - 요청을 받는 곳 - DB 연동되는 곳 - DB
+  
+  clinet : main() 메소드가 있는 클래스
+  요청을 받는 곳 : controller class
+  DB 연동되는 곳 : entity class => array
+                 student class
+  view : view class
+  test : test class
+  
+  
+  가장 간단한 CURD
+  
+  C -> R -> D -> U
+  
+  C :  샘플 데이터 저장 기능 구현
+  R :  view 구현 => 모든 데이터가 출력되게 끔.
+  
+  C :  한 건만 저장되는 것.
+       배열의 사용 가능 범위 체크하는 로직 구현. => 테스트 클래스에서 테스트를 진행.
+  
+  
+  
+- Test 를 어떻게 할 것인가?
+
+- 공통적으로 사용되는 class 또는 코드 는 어떻게 할 것인가?
+
+  
+  
+  
+  
+  
+  
+     
+     
+     
+     
+     
