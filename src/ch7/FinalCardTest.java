@@ -45,6 +45,13 @@ public class FinalCardTest {
 		System.out.println(c.KIND);
 		System.out.println(c.NUMBER);
 		System.out.println(c);
+		
+		Card2 c2 = new Card2("DIAMOND", 7);
+		
+		// 상수를 출력
+		System.out.println(c2.KIND);
+		System.out.println(c2.NUMBER);
+		System.out.println(c2);
 	}
 
 }
