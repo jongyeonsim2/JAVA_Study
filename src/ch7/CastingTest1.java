@@ -39,7 +39,8 @@ public class CastingTest1 {
 		// up-casting : 형변환 생략 가능, down-casting : 형변환 필수
 		
 		// 자식 -> 부모
-		car = fe;
+		car = fe; // 형변환 생략 가능.
+		car = (Car)fe;
 		
 		// 부모 -> 자식
 		// fe2 = car; // down-casting 의 경우 형변환이 필수
