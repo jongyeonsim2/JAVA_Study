@@ -33,7 +33,8 @@ interface InterF {
 // DB 벤더에서 제공해주는 jdbc Driver 를 관리하는 클래스
 class InstanceManager {
 	public static InterF getInstance() {
-		return new Oracle();
+		//return new Oracle();
+		return new MySQL();
 	}
 }
 
@@ -50,6 +51,16 @@ class Oracle implements InterF {
 	public void jdbc() {
 		// TODO Auto-generated method stub
 		System.out.println("Oracle jdbc 임.");
+	}
+	
+}
+
+class MySQL implements InterF {
+
+	@Override
+	public void jdbc() {
+		// TODO Auto-generated method stub
+		System.out.println("MySQL jdbc 임.");
 	}
 	
 }
