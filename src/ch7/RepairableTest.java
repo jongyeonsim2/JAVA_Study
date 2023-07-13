@@ -94,7 +94,8 @@ class SCV extends GroundUnit implements Repairable {
 	 */
 	void repair(Repairable r) {
 		if (r instanceof Unit2) {//Unit2 를 상속한 객체인가? 를 확인
-			Unit2 u = (Unit2)r;
+			Unit2 u = (Unit2)r;// repair() 메소드로 전달되는 객체는 Repairable type 임.
+								// 그래서, Repairable type => Unit2 type 로 type 변경한 것임.
 			
 			while(u.hitPoint!=u.MAX_HP) { // 각 Unit 의 MAX_HP 가 되도록 hitPoint 를 증가.
 										// hitPoint가 MAX_HP 에 도달하면 수리가 완료된 것임.
