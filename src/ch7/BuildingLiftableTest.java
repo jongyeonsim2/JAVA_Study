@@ -39,7 +39,9 @@ class LiftableImpl implements Liftable {
 	@Override
 	public void liftOff() {
 		// TODO Auto-generated method stub
+		System.out.println("속도 개선되었습니다.");
 		System.out.println("건물을 띄웁니다.");
+		
 	}
 
 	@Override
@@ -138,7 +140,11 @@ public class BuildingLiftableTest {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-
+		Barrack b = new Barrack();
+		b.liftOff();
+		
+		Factory f = new Factory();
+		f.liftOff();
 	}
 
 }
