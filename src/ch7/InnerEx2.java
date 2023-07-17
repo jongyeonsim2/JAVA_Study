@@ -50,7 +50,10 @@ public class InnerEx2 { //Outer class
 	
 	// 지역 클래스를 위한 메소드
 	void myMethod() {
+		// local class : instance class
+		class LocalInner {}
 		
+		LocalInner lv = new LocalInner();
 	}
 	
 	public static void main(String[] args) {
