@@ -10,12 +10,31 @@ package ch8;
  */
 
 public class TryWithResourceEx {
-
-	
 	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
+		// 1. 하나의 Exception 발생.
+		try (CloseableResource cr = new CloseableResource()) {
+			cr.exceptionWork(false); // WorkException 발생하지 않음. 
+									// CloseException 발생. => 오버라이드가 된 close() 호출되기 때문임.
+		} catch(WorkException e) {
+			e.printStackTrace();
+		} catch(CloseException e) {
+			e.printStackTrace();
+		}
+		
+		System.out.println();
+		
+		// 2. 두 개의 Exception 발생.
+		try (CloseableResource cr = new CloseableResource()) {
+			cr.exceptionWork(true); // WorkException 발생하지 않음. 
+									// CloseException 발생. => 오버라이드가 된 close() 호출되기 때문임.
+		} catch(WorkException e) {
+			e.printStackTrace();
+		} catch(CloseException e) {
+			e.printStackTrace();
+		}
 	}
 
 }
