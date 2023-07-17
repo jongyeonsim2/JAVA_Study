@@ -2,6 +2,9 @@ package ch8;
 
 /*
  * return, finally 혼재하는 경우의 동작 흐름을 이해하는 예제. 
+ * 
+ * return 은 함수의 종료하는 기능을 하는 명령어지만,
+ * try..catch..finally 인경우는 finally 까지 수행함.
  */
 
 public class FinallyTest3 {
