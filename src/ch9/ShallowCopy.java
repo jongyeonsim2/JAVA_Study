@@ -1,9 +1,6 @@
 package ch9;
 
 public class ShallowCopy {
-
-	
-	
 	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -22,11 +19,6 @@ public class ShallowCopy {
 		System.out.println("c1 = " + c1); // (77,77)
 		System.out.println("c2 = " + c2); // (77,77)
 		System.out.println("c3 = " + c3); // (1,1)
-		
-		
-		
-		
-		
 		
 	}
 
@@ -92,23 +84,4 @@ class Circle implements Cloneable {
 	}
 	
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
