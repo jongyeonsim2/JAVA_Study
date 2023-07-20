@@ -30,7 +30,6 @@ public class ExpValidCheck {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		
 		Stack st = new Stack();
 		String expData = args[0];
 		
@@ -43,7 +42,6 @@ public class ExpValidCheck {
 			} else if (ch==')') {  // 닫히는 괄호이면 => stack 에서 pop() 함.
 				st.pop();
 			}
-			
 		}
 		
 		if(st.isEmpty()) {
@@ -51,9 +49,5 @@ public class ExpValidCheck {
 		} else {
 			System.out.println("괄호가 맞지 않습니다.");
 		}
-		
-		
-
 	}
-
 }
