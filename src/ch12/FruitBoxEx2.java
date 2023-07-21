@@ -19,6 +19,13 @@ class Fruit2 implements Eatable {
 	}
 }
 
+//Fruit class
+class Fruit2Child extends Fruit2 implements Eatable {
+	public String toString() {
+		return "Fruit2Child";
+	}
+}
+
 //Apple
 class Apple2 extends Fruit2 {
 	public String toString() {
@@ -71,6 +78,7 @@ public class FruitBoxEx2 {
 		fruitBox.add(new Apple2());
 		fruitBox.add(new Grape2());
 		fruitBox.add(new Fruit2());
+		fruitBox.add(new Fruit2Child());
 		
 		appleBox.add(new Apple2());
 		// appleBox.add(new Grape()); => NG
