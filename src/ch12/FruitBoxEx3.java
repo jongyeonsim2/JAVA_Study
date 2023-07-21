@@ -79,7 +79,30 @@ public class FruitBoxEx3 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-
+		
+		// 두 가지 타입의 Box 객체를 생성.
+		FruitBox<Fruit> fruitBox = new FruitBox<Fruit>();
+		FruitBox<Apple> appleBox = new FruitBox<Apple>();
+		
+		// box에 과일을 담는다.
+		fruitBox.add(new Apple());
+		fruitBox.add(new Grape());
+		
+		appleBox.add(new Apple());
+		appleBox.add(new Apple());
+		
+		// 현재는 makeeJuice() 의 매개변수에 와일드 카드가 적용이 된 상태임.
+		System.out.println(Juicer.makeJuice(fruitBox));
+		System.out.println(Juicer.makeJuice(appleBox));
 	}
 
 }
+
+
+
+
+
+
+
+
+
