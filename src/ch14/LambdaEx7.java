@@ -43,7 +43,14 @@ public class LambdaEx7 {
 		// 3. Predicate 결합 - and(), or(), negate()
 		Predicate<Integer> p = i -> i < 100; //100보다 작으면, true, 그외는 false
 		Predicate<Integer> q = i -> i < 200; //200보다 작으면, true, 그외는 false
+		Predicate<Integer> r = i -> i%2 == 0;//2의 배수이면, true, 그외는 false
+		Predicate<Integer> notP = p.negate();//true -> false, flase -> true임.
 		
+		// Predicate 결합물
+		Predicate<Integer> all = notP;
+		
+		// 결합된 Predicate 를 사용시 test() 추상메소드로 실행하면 됨.
+		System.out.println(all.test(90));
 		
 		
 	}
