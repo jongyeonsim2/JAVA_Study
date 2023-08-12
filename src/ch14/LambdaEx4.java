@@ -1,6 +1,7 @@
 package ch14;
 
 import java.util.*;
+import java.util.function.BiConsumer;
 import java.util.function.Consumer;
 import java.util.function.Predicate;
 import java.util.function.UnaryOperator;
@@ -62,6 +63,27 @@ public class LambdaEx4 {
 		
 		
 		// key, value 로 저장된 자료 구조임. => 매개변수가 두 개인 함수형 인터페이스로 보면 됨.
+		/*
+		 * BiConsumer<T, U>		: 두 개의 매개변수가 있음. 반환값은 없음.
+		 * BiPredicate<T, U>	: 조건식을 표현. 매개변수는 두 개, 반환타입은 boolean.
+		 * BiFunction<T, U, R>	: 매개변수는 두 개, 하나의 결과를 반환.
+		 */
+		
+		Map<String, String> map = new HashMap<>();
+		map.put("1", "1");
+		map.put("2", "2");
+		map.put("3", "3");
+		map.put("4", "4");
+		
+		/*
+		 * forEach() 메소드의 매개변수의 타입 : BiConsumer<? super K, ? super V>
+		 * BiConsumer : 두 개의 매개변수가 있음. 반환값은 없음.
+		 * 
+		 * (k, v) : 매개변수가 두 개
+		 * System.out.println( "[ " + k + ", " + v + "]" ) : 전달받은 매개변수 두 개를 사용하고, 
+		 * 													반환값이 없는 형태. 
+		 */
+		map.forEach((k, v) -> System.out.println( "[ " + k + ", " + v + "]" ));
 	}
 
 }
