@@ -32,7 +32,14 @@ public class LambdaEx5 {
 		
 		List<Integer> list = new ArrayList<>();
 		
+		makeRandomList(s, list);
 		
+		System.out.println(list);
+		
+		printEvenNum(p, c, list);
+		
+		List<Integer> newList = doSomething(f, list);
+		System.out.println(newList);
 		
 	}
 	
