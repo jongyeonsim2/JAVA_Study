@@ -120,10 +120,26 @@
          - and() : and 연산자
          - or()  : or 연산자
          - negate() : ! 연산자
+         - isEqusl() : 같은지, 다른지
   
   
   1.5 메서드 참조
+       - 람다식보다 더 간결하게 표현하는 방법.
+         람다식에서 하나의 메서드만 호출하는 경우, 메서드 참조라는 방법으로 간결하게 표현이 가능.
+         
+       - 일반적인 메소드의 참조 방법
+         Function<String, Integer> f = (s) -> Integer.parseInt(s);
+         Function<String, Integer> f = Integer::parseInt; //매개변수를 제거 후 클래스와 메소드만 기입.
+         
+         BiFunction<String, String, Boolean> f = (s1, s2) -> s1.equals(s2);
+         BiFunction<String, String, Boolean> f = String::equals; // 메소드 참조 방식임.
   
+       - 생성자의 메소드 참조
+         Supplier<MyClass> s = () -> new MyClass();
+         Supplier<MyClass> s = MyClass::new;
+         
+         Function<Integer, int[]> f = x -> new int[x];
+         Function<Integer, int[]> f = int[x]::new;
   
   
   
