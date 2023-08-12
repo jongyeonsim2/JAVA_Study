@@ -47,12 +47,25 @@ public class LambdaEx7 {
 		Predicate<Integer> notP = p.negate();//true -> false, flase -> true임.
 		
 		// Predicate 결합물
-		Predicate<Integer> all = notP;
+		Predicate<Integer> all = notP.and(q).or(r);
 		
 		// 결합된 Predicate 를 사용시 test() 추상메소드로 실행하면 됨.
-		System.out.println(all.test(90));
+		System.out.println(all.test(90));// true 의 부정 => false
 		
 		
+		
+		
+		// 4. Predicate 결합 - isEqual()
+		String str1 = "123";
+		String str2 = "123";
+		String str3 = "1234";
+		
+		Predicate<String> p2 = Predicate.isEqual(str1);
+		boolean result = p2.test(str2);
+		System.out.println("p2.test() : " + result);
+		
+		boolean result2 = p2.test(str3);
+		System.out.println("p2.test() : " + result2);
 	}
 
 }
