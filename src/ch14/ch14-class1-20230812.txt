@@ -102,7 +102,7 @@
          => 함수형 인터페이스 의 추상 메소드로 실행 => 구현한 람다식이 실행 => 함수형 프로그래밍
          
        - 실제 자료를 저장시 사용하는 데이터 타입은 wrapper class 를 사용. => Integer 를 사용함.
-         장점도 있지만, 단점으로는 성능이 낮아서, int 형으로 사용할 수 있는 함수형 인터페이스를 제공됨.
+         장점도 있지만, 단점으로는 성능이 낮아서, int 형으로 사용할 수 있는 함수형 인터페이스가 제공됨.
          
 			Supplier  : IntSupplier 
 			Consumer  : IntConsumer
@@ -110,7 +110,20 @@
 			Function  : IntFunction
          
          
-         
+  1.4 함수형 인터페이스 결합
+  
+       - Function 결합
+         - andThen() : a.andThen(b), a 의 람다식을 실행한 결과를 b 의 람다식의 매개변수로 사용.
+         - compose() : b.compose(a), a 의 람다식을 실행한 결과를 b 의 람다식의 매개변수로 사용.
+       
+       - Predicate 결합
+         - and() : and 연산자
+         - or()  : or 연산자
+         - negate() : ! 연산자
+  
+  
+  
+   
      
      
      
