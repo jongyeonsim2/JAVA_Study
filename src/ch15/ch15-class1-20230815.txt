@@ -45,6 +45,11 @@
        InputStream, OutputStream 은 모든 바이트 기반 스트림의 조상임.
    
        표 15-7, 표 15-8 참조 에서 메소드 확인
+       
+       InputStream.available() : 읽어 올 수 있는 데이터의 크기를 반환.
+          blocking 없이 읽어 올 수 있는 바이트의 수를 반환.
+          blocking 이란 데이터를 읽어 올 때 데이터를 기다리기 위해 멉춰있는 것을 의미함.
+          기다리지 않고 바로 읽어 올 수 있는 바이트의 수를 반환함.
    
    2.2 ByteArrayInputStream, ByteArrayOutputStream ( 메모리 대상 )
    	   - 메모리, 바이트배열에 데이터를 입출력하는데 사용되는 스트림.
@@ -52,13 +57,56 @@
    	    하는데 사용됨.
    
    2.3 FileInputStream, FileOutputStream ( 파일 대상 )
+   	    표 15-9 참조
 
 
+3. 바이트 기반의 보조 스트림 ( 입출력 성능 향상이 목적 )
+   스스로 입출력을 할 수 없음.
+   
+   3.1 BufferedInputStream, BufferedOutputStream
+       스트림의 입출력 효율을 높이기 위해 버퍼를 사용하는 보조스트림.
 
-
-
-
-
+       표 15-10 참조
+       
+       3.1.1
+       버퍼가 가득 차면, 버퍼의 모든 내용을 출력 소스에 출력함.
+       버퍼를 비고우 다시 프로그램으로부터의 출력을 저장할 준비를 하게 됨.
+       
+       마지막 출력 부분에서 출력소스에 쓰지 못하고 버퍼에 남아 있는 상태로
+       프로그램이 종료될 수 있음에 주의.
+       
+       그래서, 프로그램 마지막에 flush() 또는 close()를 반드시 호출해야 함.
+       
+       3.1.2
+       BufferedOutputStream.close() 만 하더라도, OutputStream( 파일 등 )의
+       close() 가 호출됨.
+       
+   
+   3.2 SequenceInputStream
+       여러 개의 입력스트림을 연속적으로 연결해서 하나의 스트림으로부터 데이터를 읽도록 하는 보조 스트림.
+       
+       표 15-14 참조.
+       
+       - collection
+       - Iterator
+       - Enumeration
+       - hasNext()
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
 
 
 

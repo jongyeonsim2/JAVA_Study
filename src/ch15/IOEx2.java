@@ -1,5 +1,7 @@
 package ch15;
 
+import java.util.Arrays;
+
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 
@@ -31,7 +33,14 @@ public class IOEx2 {
 		output = new ByteArrayOutputStream(); // 일단 출력 후, 배열형태로 변환.
 		
 		// read(), write() 시 성능 향상을 위해서 처리 단위를 변경해서 작업.
+		input.read(temp, 0, temp.length);
+		output.write(temp, 5, 5);
 		
+		outSrc = output.toByteArray();
+		
+		System.out.println("Input : " + Arrays.toString(inSrc));
+		System.out.println("temp : " + Arrays.toString(temp));
+		System.out.println("Onput : " + Arrays.toString(outSrc));
 		
 	}
 
