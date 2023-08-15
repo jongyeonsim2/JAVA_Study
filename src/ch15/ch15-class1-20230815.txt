@@ -85,12 +85,22 @@
    3.2 SequenceInputStream
        여러 개의 입력스트림을 연속적으로 연결해서 하나의 스트림으로부터 데이터를 읽도록 하는 보조 스트림.
        
+       SequenceInputStream 의 생성자의 매개변수는 Enumeration, InputStream임.
+       
        표 15-14 참조.
        
        - collection
+         다수의 데이터를 처리하는 경우에 사용됨.
+         
        - Iterator
+         컬렉션에 저장된 요소를 읽어오는 방법을 표준화한 Interface.
+       
        - Enumeration
+         Iterator 의 구버전. 
+         컬렉션 프레임워크가 만들어지기 이전에 사용되었는 것.
+       
        - hasNext()
+         Iterator, Enumeration 의 메소드.
        
        
        
