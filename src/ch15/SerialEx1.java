@@ -21,7 +21,8 @@ public class SerialEx1 {
 
 		try {
 			// 직렬화 파일면
-			String fileName = "UserInfo.ser";
+			//String fileName = "UserInfo.ser";
+			String fileName = "C:\\workspace-eclipse-java-2023-06\\JAVA_Study\\src\\ch15\\UserInfo.ser";
 			
 			// 기반 출력 스트림
 			FileOutputStream fos = new FileOutputStream(fileName);
@@ -31,9 +32,23 @@ public class SerialEx1 {
 			// 직렬화 보조 스트림
 			ObjectOutputStream out = new ObjectOutputStream(bos);
 			
-			// 
+			// 객체 생성
+			UserInfo u1 = new UserInfo("Kim", "1234", 32);
+			UserInfo u2 = new UserInfo("Park", "1234", 28);
 			
+			ArrayList<UserInfo> list = new ArrayList<UserInfo>();
 			
+			list.add(u1);
+			list.add(u2);
+			
+			// 직렬화 => 순서를 기억해야 함.
+			out.writeObject(u1);
+			out.writeObject(u2);
+			out.writeObject(list);
+			
+			out.close();
+			
+			System.out.println("직렬화 처리 완료.");
 			
 			
 		} catch(IOException e) {
