@@ -104,17 +104,34 @@
        
        
        
+4. 문자기반 스트림( 2바이트 단위로 처리, char )
+       
+   4.1 Reader, Writer
+       각각의 메소드를 확인. => 매개변수가 char[] 임.
+       표 15-21 참조, 표 15-22 참조.
+   
+       
+   4.2 FileReader, FileWriter( 대상이 File 임. )
+       사용할 메소드는 표 15-21 참조, 표 15-22 참조.
        
        
+   4.3 StringReader, StringWriter( 대상이 메모리, StringBuffer 임. )
+       사용할 메소드는 표 15-21 참조, 표 15-22 참조.
+       
+       StringBuffer 에 접근할 수 있는 메소드.
+       getBuffer() : 출력된 데이터가 저장된 StringBuffer 를 반환.
+       toString() : StringBuffer 저정된 데이터를 문자열로 반환.
        
        
-       
-       
-       
-       
-       
-       
-       
+   
+5. 문자 기반의 보조 스트림.
+
+   5.1 BufferReader, BufferWriter
+       버퍼를 이용해서 입출력의 효율을 높일 수 있도록 하는 역할.
+   
+   
+   5.2 InputStreamReader, OutputStreamWriter
+       바이트 기반 스트림을 문자 기반 스트림으로 연결시켜주는 역할.
        
        
 
