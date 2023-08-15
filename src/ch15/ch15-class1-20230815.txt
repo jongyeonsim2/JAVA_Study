@@ -111,7 +111,7 @@
        표 15-21 참조, 표 15-22 참조.
    
        
-   4.2 FileReader, FileWriter( 대상이 File 임. )
+   4.2 FileReader, FileWriter( 대상이 File 임. ) (  중요함  )
        사용할 메소드는 표 15-21 참조, 표 15-22 참조.
        
        
@@ -126,13 +126,49 @@
    
 5. 문자 기반의 보조 스트림.
 
-   5.1 BufferReader, BufferWriter
+   5.1 BufferReader, BufferWriter (  중요함  )
        버퍼를 이용해서 입출력의 효율을 높일 수 있도록 하는 역할.
    
    
    5.2 InputStreamReader, OutputStreamWriter
        바이트 기반 스트림을 문자 기반 스트림으로 연결시켜주는 역할.
        
+       
+6. 표준입출력과 File
+
+   6.1 표준 입출력
+       6.1.1
+	       System.in(입력, 콘솔로 입력, Scanner 를 많이 사용되고 있음.), 
+	       System.out(출력, 콘솔로 출력), 
+	       System.err(에러)
+	       
+	       자동으로 생성됨으로 생성하는 코드르 작성하지 않고도 사용이 가능함.
+	       
+       6.1.2 표준 입출력 변경
+           setOut()
+           setErr()
+           setIn()
+
+   6.2 RandomAccessFile
+       일반적인 파일 스트림의 특징은 순차적 읽기와 쓰기임. 하지만,
+       RandomAccessFile 스트림의 특징은 파일의 어느 위치에서나 읽기 및 쓰기가 가능함. => 장점.
+       
+       표 15-25 참고. RandomAccessFile의 메소드를 확인.
+       getFilePointer(), seek() : 포인트의 위치 변경.( RandomAccess 가 가능함. )
+       
+   
+   6.3 File (  중요함  )
+       - File 객체는 파일 뿐만이 아니라, 디렉토리까지 포함.
+       - 다양한 메소드를 잘 활용하는 것이 중요함.
+         exists()
+         isDirectory()
+         createNewFile() 빈 파일을 생성. 존재하는 경우는 만들지 않음.
+         delete()
+         listFiles() 현재 디렉토리의 목록을 File 배열로 반환.
+         renameTo() 파일명 변경
+         
+         
+         
        
 
 
